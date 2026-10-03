@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "a-ponte"
+version = "0.1.0"
+description = "MBA A2A/MCP - A Ponte: servidor MCP (:7301) e agente A2A (:7300)."
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "mcp==2.3.0",
+    "mcp-types==2.3.0",
+    "httpx2==2.13.1",
+    "starlette==1.7.0",
+    "uvicorn==0.54.0",
+    "python-dotenv==1.2.4",
+]
+
+# Os dois processos rodam por caminho (python servidor-mcp/main.py e
+# python agente/main.py); nao ha pacote importavel. O pyproject existe para
+# declarar e travar as dependencias, e `pip install -e .` instala so elas.
+[tool.setuptools]
+packages = []

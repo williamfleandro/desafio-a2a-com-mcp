@@ -4,3 +4,11 @@ __pycache__/
 node_modules/
 dist/
 *.log
+venv/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.idea/
+.vscode/
+*.egg-info/
